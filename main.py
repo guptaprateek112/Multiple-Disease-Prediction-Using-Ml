@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri May 23 09:52:55 2025
-
-@author: gprat
-"""
 
 import pickle
 import streamlit as st
@@ -14,13 +8,6 @@ from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 from io import BytesIO
 from datetime import datetime
-
-from reportlab.graphics.shapes import Drawing
-from reportlab.graphics.charts.barcharts import VerticalBarChart
-from reportlab.graphics.charts.textlabels import Label
-from reportlab.lib.colors import green, red, blue, orange
-from reportlab.graphics import renderPDF
-
 
 
 st.markdown(
