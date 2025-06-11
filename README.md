@@ -1,4 +1,8 @@
-🩺 Multiple Disease Prediction System
+![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)  https://multiple-disease-prediction-using-ml-by-prateek.streamlit.app/
+
+
+
+                                                     🩺 Multiple Disease Prediction System
 <div align="center"> <img src="https://img.shields.io/badge/Python-3.8%2B-blue?logo=python" alt="Python version"> <img src="https://img.shields.io/badge/Streamlit-1.30-green?logo=streamlit" alt="Streamlit version"> <img src="https://img.shields.io/badge/ML-Sklearn-orange?logo=scikit-learn" alt="Scikit-Learn"> <img src="https://img.shields.io/badge/Status-Active-brightgreen" alt="Project Status"> </div>
 <div align="center"> <img src="https://raw.githubusercontent.com/username/repo/main/demo.gif" alt="App Demo" width="800"> </div>
 🌟 Introduction
