@@ -231,11 +231,11 @@ if auth_status:
     st.write("Use machine learning to predict common diseases.")
 
     # ✅ Load Models
-    with open('C:/Users/gprat/OneDrive/Desktop/Multiple Disease Prediction/models/diabetes_model.sav', 'rb') as file:
+    with open('models/diabetes_model.sav', 'rb') as file:
         diabetes_model = pickle.load(file)
-    with open('C:/Users/gprat/OneDrive/Desktop/Multiple Disease Prediction/models/heart_model.sav', 'rb') as file:
+    with open('models/heart_model.sav', 'rb') as file:
         heart_disease_model = pickle.load(file)
-    with open('C:/Users/gprat/OneDrive/Desktop/Multiple Disease Prediction/models/parkinsons_model.sav', 'rb') as file:
+    with open('models/parkinsons_model.sav', 'rb') as file:
         parkinsons_model = pickle.load(file)
 
     # 🧭 Sidebar Navigation
