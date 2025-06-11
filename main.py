@@ -173,7 +173,7 @@ st.markdown(
 
 
 
-# 🔐 Authentication Config
+# Authentication Config
 hashed_passwords = stauth.Hasher(['123456789']).generate()
 
 config = {
@@ -204,10 +204,10 @@ authenticator = stauth.Authenticate(
     config['preauthorized']
 )
 
-# 🔐 Login Widget
+# Login Widget
 name, auth_status, username = authenticator.login('Login', 'main')
 
-# 🔑 User Authenticated
+# User Authenticated
 if auth_status:
     authenticator.logout('Logout', 'sidebar')
     st.sidebar.success(f'Welcome {name}')
@@ -217,7 +217,7 @@ if auth_status:
     st.title(" Multiple Disease Prediction System")
     st.write("Use machine learning to predict common diseases.")
 
-    # ✅ Load Models
+    # Load Models
     with open('models/diabetes_model.sav', 'rb') as file:
         diabetes_model = pickle.load(file)
     with open('models/heart_model.sav', 'rb') as file:
@@ -225,7 +225,7 @@ if auth_status:
     with open('models/parkinsons_model.sav', 'rb') as file:
         parkinsons_model = pickle.load(file)
 
-    # 🧭 Sidebar Navigation
+    # Sidebar Navigation
     with st.sidebar:
         selected = option_menu(
         menu_title='Disease Predictor',
@@ -235,13 +235,12 @@ if auth_status:
         key='main_menu'  
         
     )
-    # 🩺 Pages
+    #  Pages
 
 
-    # -----------------------------------------------
-    # 🩸 DIABETES PREDICTION
-    # -----------------------------------------------
-    # ----------------------------
+   
+    # DIABETES PREDICTION
+   
     if selected == 'Diabetes Prediction':
         st.header('🩸 Diabetes Prediction')
         col1, col2, col3 = st.columns(3)
@@ -268,7 +267,7 @@ if auth_status:
             else:
                 st.success("The model predicts that this patient is unlikely to have **Diabetes**.")
 
-                # 🧾 Improved PDF generation
+                #  PDF generation
                 buffer = BytesIO()
                 c = canvas.Canvas(buffer, pagesize=letter)
                 
@@ -367,9 +366,9 @@ if auth_status:
             - ⚠️ Consult a doctor if you're at risk. Monitor glucose, diet, and activity levels regularly.
             """)
 
-    # -----------------------------
-    # ❤️ Heart Disease Prediction
-    # -----------------------------
+   
+    #  Heart Disease Prediction
+   
     elif selected == 'Heart Disease Prediction':
         st.header("❤️ Heart Disease Prediction")
 
@@ -496,9 +495,9 @@ if auth_status:
             - ⚠️ For high-risk, seek further tests like ECG, ECHO, and stress tests from a cardiologist.
             """)
 
-    # -----------------------------
-    # 🧠 Parkinson's Disease Prediction
-    # -----------------------------
+   
+    #  Parkinson's Disease Prediction
+   
     elif selected == 'Parkinsons Disease Prediction':
         st.header("🧠 Parkinson's Disease Prediction")
 
@@ -549,10 +548,10 @@ if auth_status:
 
 
 
-# 🔴 Invalid Credentials
+#  Invalid Credentials
 elif auth_status is False:
     st.error('Incorrect username or password')
 
-# 🟡 Not Logged In Yet
+# Not Logged In Yet
 elif auth_status is None:
     st.warning('Please enter your username and password')
